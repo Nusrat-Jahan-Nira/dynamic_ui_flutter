@@ -25,7 +25,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'dynamic_ui/ui_view.dart';
+import 'dynamic_ui/views/ui_view.dart';
+import 'payoneer/views/payoneer_view.dart';
 
 
 void main() {
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter API Example',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const UIView(),
+      //home: const UIView(),
+      home: PayoneerView(),
     );
   }
 }

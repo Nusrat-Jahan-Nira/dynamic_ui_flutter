@@ -1,29 +1,3 @@
-// lib/models/ui_component.dart
-
-// class UIComponent {
-//   String type; // e.g., "text", "button"
-//   String label; // Display label
-//   String? placeholder; // Placeholder for input fields
-//   ActionDetails? actionDetails; // Details for the action to be taken
-//
-//   UIComponent({
-//     required this.type,
-//     required this.label,
-//     this.placeholder,
-//     this.actionDetails,
-//   });
-//
-//   factory UIComponent.fromJson(Map<String, dynamic> json) {
-//     return UIComponent(
-//       type: json['type'],
-//       label: json['label'],
-//       placeholder: json['placeholder'],
-//       actionDetails: json['actionDetails'] != null
-//           ? ActionDetails.fromJson(json['actionDetails'])
-//           : null,
-//     );
-//   }
-// }
 
 class UIComponent {
   String type; // e.g., "text", "button", "dropdown"
@@ -102,24 +76,4 @@ class LoginResponseModel {
     );
   }
 }
-
-// class UIResponse {
-//   String? outCode;
-//   String? outMessage;
-//   List<UIComponent>? components;
-//
-//   UIResponse({this.outCode, this.outMessage, this.components});
-//
-//   factory UIResponse.fromJson(Map<String, dynamic> json) {
-//     return UIResponse(
-//       outCode: json['outCode'] as String?,
-//       outMessage: json['outMessage'] as String?,
-//       components: (json['components'] != null)
-//           ? (json['components'] as List<dynamic>)
-//           .map((item) => UIComponent.fromJson(item))
-//           .toList()
-//           : null, // If components are null, set it as null
-//     );
-//   }
-// }
 

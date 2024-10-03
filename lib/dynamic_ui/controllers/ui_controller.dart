@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'api_service.dart';
-import 'ui_component.dart';
+import '../services/api_service.dart';
+import '../model/ui_component.dart';
 
 class UIController extends GetxController {
   var components = <UIComponent>[].obs; // List of UI components
