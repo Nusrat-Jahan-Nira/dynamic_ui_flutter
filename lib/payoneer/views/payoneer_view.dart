@@ -163,24 +163,21 @@ class PayoneerView extends StatelessWidget {
     // Check the component type and add it to the list
     switch (component.type) {
       case 'Label':
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "${component.label}: ", // Added colon after the label
-                style: const TextStyle(
-                    fontSize: 16.0,),
-              ),
-              Text(
-                component.value ?? "",
-                style: TextStyle(
-                    fontWeight: component.type == 'Card'? FontWeight.bold: FontWeight.normal,
-                    fontSize: 16.0),
-              ),
-            ],
-          ),
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "${component.label}: ", // Added colon after the label
+              style: const TextStyle(
+                  fontSize: 16.0,),
+            ),
+            Text(
+              component.value ?? "",
+              style: TextStyle(
+                  fontWeight: component.type == 'Card'? FontWeight.bold: FontWeight.normal,
+                  fontSize: 16.0),
+            ),
+          ],
         );
 
       case 'TextField':

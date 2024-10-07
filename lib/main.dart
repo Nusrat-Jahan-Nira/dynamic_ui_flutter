@@ -26,6 +26,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dynamic_ui/views/ui_view.dart';
+import 'firebase_dynamic_ui/view/firebase_dynamic_view.dart';
 import 'payoneer/views/payoneer_view.dart';
 
 
@@ -40,9 +41,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter API Example',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.green, // Change this to your desired primary color
+        hintColor: Colors.greenAccent, // Change this to your desired accent color
+        buttonTheme: const ButtonThemeData(
+          buttonColor: Colors.green, // Default button color
+        ),
+        // Customize other theme properties as needed
+      ),
       //home: const UIView(),
-      home: PayoneerView(),
+     // home: PayoneerView(),
+      home: FirebaseDynamicView(),
     );
   }
 }
