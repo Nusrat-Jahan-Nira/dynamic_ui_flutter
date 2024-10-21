@@ -26,6 +26,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dynamic_ui/views/ui_view.dart';
+import 'dynamic_ui_from_configuration_web/dynamic_form_screen.dart';
+import 'dynamic_ui_from_configuration_web/registration_page.dart';
 import 'firebase_dynamic_ui/view/firebase_dynamic_view.dart';
 import 'payoneer/views/payoneer_view.dart';
 
@@ -40,6 +42,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialRoute: '/',
+      getPages: [
+        //GetPage(name: '/', page: () => HomePage()), // Your home page
+        GetPage(name: '/RegistrationPage', page: () => const RegistrationPage()), // Register the RegistrationPage route
+        // Add more routes as needed
+      ],
       title: 'Flutter API Example',
       theme: ThemeData(
         primarySwatch: Colors.green, // Change this to your desired primary color
@@ -51,7 +59,7 @@ class MyApp extends StatelessWidget {
       ),
       //home: const UIView(),
      // home: PayoneerView(),
-      home: FirebaseDynamicView(),
+      home: DynamicFormScreen(),
     );
   }
 }

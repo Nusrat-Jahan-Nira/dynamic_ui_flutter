@@ -8,7 +8,7 @@ class CommonWidgets {
   static Widget textField({
     required String label,
     required String hintText,
-    required bool obscureText,
+    required bool? obscureText,
     required Function(String) onChanged,
   }) {
     return Column(
@@ -19,7 +19,7 @@ class CommonWidgets {
           decoration: InputDecoration(
             hintText: hintText,
           ),
-          obscureText: obscureText,
+          obscureText: obscureText?? false,
           onChanged: onChanged,
         ),
         const SizedBox(height: 10),

@@ -26,7 +26,7 @@ class _UIViewState extends State<UIView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dynamic UI'), backgroundColor: Colors.blue),
+      //appBar: AppBar(title: const Text('Dynamic UI'), backgroundColor: Colors.blue),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Obx(() {
